@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>📝 RSA String Encryption</h2>
+<p class="subtitle">Encrypt text by converting each character to ASCII and encrypting individually</p>
+
+<div class="card wide-card">
+    <form method="post" class="form-grid">
+
+        <label>Plaintext Message</label>
+        <textarea name="plaintext" rows="4" placeholder="Enter text message to encrypt..." required></textarea>
+
+        <label>Public Exponent (e)</label>
+        <input type="number" name="e" placeholder="Enter public exponent e" required>
+
+        <label>Modulus (n)</label>
+        <input type="number" name="n" placeholder="Enter modulus n (must be > 127 for ASCII)" required>
+
+        <div class="btn-row">
+            <button class="btn primary">Encrypt String</button>
+        </div>
+
+    </form>
+</div>
+
+<div class="info-box">
+    <h4>ℹ️ String Encryption Process:</h4>
+    <ol>
+        <li>Convert each character to its ASCII value</li>
+        <li>Encrypt each ASCII value using RSA: c<sub>i</sub> ≡ m<sub>i</sub><sup>e</sup> mod n</li>
+        <li>Concatenate all encrypted values with spaces</li>
+    </ol>
+    <p><strong>Note:</strong> All ASCII values must be < n (typically n should be > 127 for standard ASCII)</p>
+</div>
+
+<a href="/ex3/rsa" class="btn ghost">⬅ Back to RSA Menu</a>
+
+{% endblock %}

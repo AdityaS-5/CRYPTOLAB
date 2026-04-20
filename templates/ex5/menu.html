@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Exercise 5: DES Encryption & CMAC</h2>
+
+<div class="menu-grid">
+    <div class="menu-card">
+        <h3>🔐 DES Encryption</h3>
+        <p>Data Encryption Standard with CBC mode encryption</p>
+        <a href="/ex5/des_encrypt" class="btn primary">Go to DES Encrypt</a>
+    </div>
+
+    <div class="menu-card">
+        <h3>🔓 DES Decryption</h3>
+        <p>Decrypt DES-encrypted ciphertext</p>
+        <a href="/ex5/des_decrypt" class="btn primary">Go to DES Decrypt</a>
+    </div>
+
+    <div class="menu-card">
+        <h3>📋 CMAC (Cipher-based MAC)</h3>
+        <p>Generate CMAC authentication code using DES</p>
+        <a href="/ex5/cmac" class="btn primary">Go to CMAC</a>
+    </div>
+</div>
+
+<a href="/" class="btn ghost">⬅ Back to Main Menu</a>
+
+{% endblock %}

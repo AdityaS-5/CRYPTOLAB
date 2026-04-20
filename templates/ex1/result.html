@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>{{ title }}</h2>
+<br>
+
+<div class="result-box">
+    <strong>Output</strong><br><br>
+    {{ result }}
+</div>
+
+<div class="steps-box">
+    {{ steps }}
+</div>
+
+<br>
+<a href="javascript:history.back()" class="btn">⬅ Back</a>
+
+{% endblock %}
+

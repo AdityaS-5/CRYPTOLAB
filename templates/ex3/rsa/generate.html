@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>🔑 RSA Key Generation</h2>
+<p class="subtitle">Generate RSA public and private key pairs</p>
+
+<div class="card wide-card">
+    <form method="post" class="form-grid">
+
+        <label>Prime Number p</label>
+        <input type="number" name="p" placeholder="Enter first prime number (e.g., 61)" required>
+
+        <label>Prime Number q</label>
+        <input type="number" name="q" placeholder="Enter second prime number (e.g., 53)" required>
+
+        <div class="btn-row">
+            <button class="btn primary">Generate Keys</button>
+        </div>
+
+    </form>
+</div>
+
+<div class="info-box">
+    <h4>ℹ️ How it works:</h4>
+    <ul>
+        <li><strong>p and q:</strong> Two large distinct prime numbers</li>
+        <li><strong>n = p × q:</strong> The public modulus</li>
+        <li><strong>φ(n) = (p-1) × (q-1):</strong> Euler's totient function</li>
+        <li><strong>e:</strong> Public exponent (usually 65537)</li>
+        <li><strong>d:</strong> Private exponent, calculated using extended GCD</li>
+        <li><strong>Public Key:</strong> (e, n)</li>
+        <li><strong>Private Key:</strong> (d, n)</li>
+    </ul>
+</div>
+
+<a href="/ex3/rsa" class="btn ghost">⬅ Back to RSA Menu</a>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Hill Cipher</h2>
+
+<form method="post" onsubmit="return validateHill();">
+
+    <label>Plain / Cipher Text (letters only):</label><br>
+    <input type="text"
+           id="text"
+           name="text"
+           pattern="[A-Za-z]+"
+           title="Only letters allowed"
+           required>
+    <br><br>
+
+    <label>Matrix Size (n × n):</label><br>
+    <input type="number"
+           id="n"
+           name="n"
+           min="2"
+           max="5"
+           required>
+    <br><br>
+
+    <label>Key Matrix (row-wise integers):</label><br>
+    <textarea name="key"
+              rows="4"
+              required
+              placeholder="Example for 3×3:
+1 2 3
+4 5 6
+11 9 8"></textarea>
+    <br><br>
+
+    <button type="submit" name="action" value="Encrypt">Encrypt</button>
+    <button type="submit" name="action" value="Decrypt">Decrypt</button>
+</form>
+
+<br>
+<a href="/ex1">⬅ Back</a>
+
+<script>
+function validateHill() {
+    const text = document.getElementById("text").value;
+    const n = parseInt(document.getElementById("n").value);
+
+    if (isNaN(n) || n <= 0) {
+        alert("Please enter a valid matrix size.");
+        return false;
+    }
+
+    if (text.length % n !== 0) {
+        alert(
+            "Invalid input!\n\n" +
+            "Plaintext length must be a multiple of matrix size (n).\n" +
+            "Text length = " + text.length + "\n" +
+            "Matrix size = " + n
+        );
+        return false;
+    }
+
+    return true; // allow form submission
+}
+</script>
+
+{% endblock %}
+

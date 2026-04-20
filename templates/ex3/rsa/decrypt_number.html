@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>🔓 RSA Number Decryption</h2>
+<p class="subtitle">Decrypt a numerical ciphertext using RSA private key</p>
+
+<div class="card wide-card">
+    <form method="post" class="form-grid">
+
+        <label>Ciphertext (Integer)</label>
+        <input type="number" name="ciphertext" placeholder="Enter ciphertext number" required>
+
+        <label>Private Exponent (d)</label>
+        <input type="number" name="d" placeholder="Enter private exponent d" required>
+
+        <label>Modulus (n)</label>
+        <input type="number" name="n" placeholder="Enter modulus n" required>
+
+        <div class="btn-row">
+            <button class="btn primary">Decrypt</button>
+        </div>
+
+    </form>
+</div>
+
+<div class="info-box">
+    <h4>ℹ️ RSA Decryption Formula:</h4>
+    <p><strong>m ≡ c<sup>d</sup> mod n</strong></p>
+    <ul>
+        <li><strong>c:</strong> Ciphertext</li>
+        <li><strong>d:</strong> Private exponent</li>
+        <li><strong>n:</strong> Modulus</li>
+        <li><strong>m:</strong> Plaintext message</li>
+    </ul>
+</div>
+
+<a href="/ex3/rsa" class="btn ghost">⬅ Back to RSA Menu</a>
+
+{% endblock %}

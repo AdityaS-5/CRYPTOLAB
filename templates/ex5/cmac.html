@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>📋 CMAC (Cipher-based MAC)</h2>
+<p class="subtitle">Generate authentication code using DES-based CMAC</p>
+
+<div class="card wide-card">
+    <form method="post" class="form-grid">
+
+        <label>Message</label>
+        <input type="text" name="message" placeholder="Enter message" required>
+
+        <label>Key (8 characters or less)</label>
+        <input type="text" name="key" placeholder="Encryption key" required>
+
+        <label>MAC Length (bits)</label>
+        <input type="number" name="n_bits" min="1" max="64" value="32" required>
+        <small>Number of bits to truncate from the last DES block (1-64)</small>
+
+        <div class="btn-row">
+            <button class="btn primary">Generate CMAC</button>
+        </div>
+
+    </form>
+</div>
+
+<a href="/ex5" class="btn ghost">⬅ Back to Exercise 5</a>
+
+{% endblock %}

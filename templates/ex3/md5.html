@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>🔐 MD5 Hash</h2>
+<p class="subtitle">MD5 message digest algorithm with detailed step-by-step trace</p>
+
+<div class="card wide-card">
+    <form method="post" class="form-grid">
+
+        <label>Message to Hash</label>
+        <textarea name="message" rows="4" placeholder="Enter text to hash..." required></textarea>
+
+        <div class="btn-row">
+            <button class="btn primary">Compute Hash</button>
+        </div>
+
+    </form>
+</div>
+
+<a href="/ex3" class="btn ghost">⬅ Back to Exercise 3</a>
+
+{% endblock %}

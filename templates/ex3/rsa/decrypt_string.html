@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>📄 RSA String Decryption</h2>
+<p class="subtitle">Decrypt values back to original text message</p>
+
+<div class="card wide-card">
+    <form method="post" class="form-grid">
+
+        <label>Encrypted Values (space-separated)</label>
+        <textarea name="encrypted_values" rows="4" placeholder="e.g., 123 456 789 (space-separated numbers)" required></textarea>
+
+        <label>Private Exponent (d)</label>
+        <input type="number" name="d" placeholder="Enter private exponent d" required>
+
+        <label>Modulus (n)</label>
+        <input type="number" name="n" placeholder="Enter modulus n" required>
+
+        <div class="btn-row">
+            <button class="btn primary">Decrypt String</button>
+        </div>
+
+    </form>
+</div>
+
+<div class="info-box">
+    <h4>ℹ️ String Decryption Process:</h4>
+    <ol>
+        <li>Decrypt each value using RSA: m<sub>i</sub> ≡ c<sub>i</sub><sup>d</sup> mod n</li>
+        <li>Convert each decrypted ASCII value back to its character</li>
+        <li>Concatenate all characters to form the plaintext message</li>
+    </ol>
+    <p><strong>Input format:</strong> Space-separated encrypted values (e.g., "123 456 789")</p>
+</div>
+
+<a href="/ex3/rsa" class="btn ghost">⬅ Back to RSA Menu</a>
+
+{% endblock %}

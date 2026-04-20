@@ -1,0 +1,200 @@
+/* ===============================
+   GLOBAL THEME
+================================ */
+:root {
+    --bg-main: #f8f9fa;
+    --bg-card: #ffffff;
+    --accent: #0066cc;
+    --accent-2: #7c3aed;
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --danger: #ef4444;
+    --success: #10b981;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", "Inter", system-ui, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f8f9fa, #f0f1f5);
+    color: var(--text-main);
+    min-height: 100vh;
+}
+
+/* ===============================
+   HEADER
+================================ */
+header {
+    background: #ffffff;
+    padding: 20px 40px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+header h1 {
+    font-size: 24px;
+    color: var(--accent);
+    letter-spacing: 1px;
+}
+
+header span {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* ===============================
+   LAYOUT
+================================ */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* ===============================
+   DASHBOARD CARDS
+================================ */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: var(--bg-card);
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+a.btn,
+button {
+    display: inline-block;
+    background: linear-gradient(135deg, #0066cc, #7c3aed);
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.btn:hover,
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 102, 204, 0.4);
+}
+
+/* ===============================
+   FORMS
+================================ */
+form {
+    background: var(--bg-card);
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+input, textarea, select {
+    width: 100%;
+    background: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 10px;
+    color: var(--text-main);
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--accent);
+    background: #ffffff;
+}
+
+/* ===============================
+   RESULT & STEPS
+================================ */
+.result-box {
+    background: #f0fdf4;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid var(--success);
+    margin-bottom: 25px;
+    word-break: break-all;
+    color: var(--text-main);
+}
+
+.steps-box {
+    background: #f3f4f6;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid var(--accent-2);
+    white-space: pre-wrap;
+    font-family: "Consolas", monospace;
+    font-size: 14px;
+    max-height: 450px;
+    overflow-y: auto;
+    color: var(--text-main);
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+/* ===============================
+   BADGES
+================================ */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #e5e7eb;
+    color: var(--accent);
+}
+

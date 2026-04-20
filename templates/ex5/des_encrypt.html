@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>🔐 DES Encryption</h2>
+<p class="subtitle">Data Encryption Standard with CBC mode</p>
+
+<div class="card wide-card">
+    <form method="post" class="form-grid">
+
+        <label>Message</label>
+        <input type="text" name="message" placeholder="Enter text to encrypt" required>
+
+        <label>Key (8 characters or less)</label>
+        <input type="text" name="key" placeholder="Will be padded to 8 bytes" required>
+
+        <label>Mode</label>
+        <select name="mode">
+            <option value="cbc">CBC</option>
+            <option value="ecb">ECB</option>
+        </select>
+
+        <div class="btn-row">
+            <button class="btn primary">Encrypt</button>
+        </div>
+
+    </form>
+</div>
+
+<a href="/ex5" class="btn ghost">⬅ Back to Exercise 5</a>
+
+{% endblock %}

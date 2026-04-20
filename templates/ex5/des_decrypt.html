@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>🔓 DES Decryption</h2>
+<p class="subtitle">Decrypt DES-encrypted ciphertext</p>
+
+<div class="card wide-card">
+    <form method="post" class="form-grid">
+
+        <label>Ciphertext (Hex format)</label>
+        <input type="text" name="ciphertext_hex" placeholder="Enter hexadecimal ciphertext" required>
+
+        <label>Key (8 characters or less)</label>
+        <input type="text" name="key" placeholder="Same key used for encryption" required>
+
+        <label>Mode</label>
+        <select name="mode">
+            <option value="cbc">CBC</option>
+            <option value="ecb">ECB</option>
+        </select>
+
+        <div class="btn-row">
+            <button class="btn primary">Decrypt</button>
+        </div>
+
+    </form>
+</div>
+
+<a href="/ex5" class="btn ghost">⬅ Back to Exercise 5</a>
+
+{% endblock %}

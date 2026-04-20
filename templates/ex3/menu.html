@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Exercise 3: Hashing, Key Exchange & Encryption</h2>
+
+<div class="menu-grid">
+    <div class="menu-card">
+        <h3>🔐 MD5 Hashing</h3>
+        <p>MD5 message digest algorithm with step-by-step trace</p>
+        <a href="/ex3/md5" class="btn primary">Go to MD5</a>
+    </div>
+
+    <div class="menu-card">
+        <h3>🔑 Diffie-Hellman</h3>
+        <p>Diffie-Hellman key exchange protocol</p>
+        <a href="/ex3/deffie_hellman" class="btn primary">Go to Diffie-Hellman</a>
+    </div>
+
+    <div class="menu-card">
+        <h3>🔒 RSA Encryption</h3>
+        <p>RSA public-key cryptosystem with key generation, encryption & decryption</p>
+        <a href="/ex3/rsa" class="btn primary">Go to RSA</a>
+    </div>
+</div>
+
+<a href="/" class="btn ghost">⬅ Back to Main Menu</a>
+
+{% endblock %}

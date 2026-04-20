@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>🔑 Diffie-Hellman Key Exchange</h2>
+<p class="subtitle">Diffie-Hellman protocol with step-by-step trace</p>
+
+<div class="card wide-card">
+    <form method="post" class="form-grid">
+
+        <label>Prime Number (p)</label>
+        <input type="number" name="p" placeholder="e.g., 23" required min="2">
+
+        <label>Primitive Root (g)</label>
+        <input type="number" name="g" placeholder="e.g., 5" required min="1">
+
+        <label>Private Key XA (Alice)</label>
+        <input type="number" name="xa" placeholder="e.g., 6" required min="1">
+
+        <label>Private Key XB (Bob)</label>
+        <input type="number" name="xb" placeholder="e.g., 15" required min="1">
+
+        <div class="btn-row">
+            <button class="btn primary">Exchange Keys</button>
+        </div>
+
+    </form>
+</div>
+
+<a href="/ex3" class="btn ghost">⬅ Back to Exercise 3</a>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Playfair Cipher</h2>
+
+<form method="post">
+    <label>Text (letters only):</label><br>
+    <input type="text"
+           name="text"
+           pattern="[A-Za-z]+"
+           required>
+    <br><br>
+
+    <label>Key (letters only):</label><br>
+    <input type="text"
+           name="key"
+           pattern="[A-Za-z]+"
+           required>
+    <br><br>
+
+    <button type="submit" name="action" value="Encrypt">Encrypt</button>
+    <button type="submit" name="action" value="Decrypt">Decrypt</button>
+</form>
+
+<br>
+<a href="/ex1">⬅ Back</a>
+
+{% endblock %}
+

@@ -1,0 +1,27 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Shift Cipher</h2>
+
+<form method="post">
+    <label>Text (letters & digits only):</label><br>
+    <input type="text"
+           name="text"
+           pattern="[A-Za-z0-9 ]+"
+           required>
+    <br><br>
+
+    <label>Key (0–25):</label><br>
+    <input type="number" name="key" min="0" max="25" required>
+    <br><br>
+
+    <button type="submit" name="action" value="Encrypt">Encrypt</button>
+    <button type="submit" name="action" value="Decrypt">Decrypt</button>
+</form>
+
+<br>
+<a href="/ex1">⬅ Back</a>
+
+{% endblock %}
+

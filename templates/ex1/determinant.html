@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Determinant</h2>
+
+<form method="post">
+    <label>Matrix Size (n × n):</label><br>
+    <input type="number" name="n" min="2" max="5" required>
+    <br><br>
+
+    <label>Matrix Elements (row-wise):</label><br>
+    <textarea name="matrix" rows="4" required
+              placeholder="Example:
+1 2
+3 4"></textarea>
+    <br><br>
+
+    <button type="submit">Compute Determinant</button>
+</form>
+
+<br>
+<a href="/ex1">⬅ Back</a>
+
+{% endblock %}
+

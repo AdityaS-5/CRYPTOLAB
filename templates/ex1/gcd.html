@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Greatest Common Divisor (GCD)</h2>
+
+<form method="post">
+    <label>First Number:</label><br>
+    <input type="number" name="a" min="1" required>
+    <br><br>
+
+    <label>Second Number:</label><br>
+    <input type="number" name="b" min="1" required>
+    <br><br>
+
+    <button type="submit">Compute GCD</button>
+</form>
+
+<br>
+<a href="/ex1">⬅ Back</a>
+
+{% endblock %}
+

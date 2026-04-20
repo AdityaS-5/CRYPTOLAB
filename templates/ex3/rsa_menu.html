@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>🔑 RSA Encryption</h2>
+<p class="subtitle">RSA public-key cryptosystem with key generation, encryption, and decryption</p>
+
+<div class="card wide-card">
+    <div class="menu-grid">
+        <a href="/ex3/rsa/generate" class="menu-item">
+            <h3>🔐 Generate Keys</h3>
+            <p>Generate RSA public and private keys from two prime numbers</p>
+        </a>
+        
+        <a href="/ex3/rsa/encrypt_number" class="menu-item">
+            <h3>🔒 Encrypt Number</h3>
+            <p>Encrypt a numerical message using RSA public key</p>
+        </a>
+        
+        <a href="/ex3/rsa/decrypt_number" class="menu-item">
+            <h3>🔓 Decrypt Number</h3>
+            <p>Decrypt a numerical ciphertext using RSA private key</p>
+        </a>
+        
+        <a href="/ex3/rsa/encrypt_string" class="menu-item">
+            <h3>📝 Encrypt String</h3>
+            <p>Encrypt text message by converting to ASCII and encrypting each character</p>
+        </a>
+        
+        <a href="/ex3/rsa/decrypt_string" class="menu-item">
+            <h3>📄 Decrypt String</h3>
+            <p>Decrypt encrypted values back to original text</p>
+        </a>
+    </div>
+</div>
+
+<a href="/ex3" class="btn ghost">⬅ Back to Exercise 3</a>
+
+{% endblock %}
